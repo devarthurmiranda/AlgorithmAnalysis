@@ -1,12 +1,6 @@
-package BubbleSort;
+package Sorts.BubbleSort;
 
-import ArchiveOpener.ArchiveOpener;
-
-/**
- * Client
- */
-public class Client {
-
+public class Bubble {
     public static void sort(int[] array) {
         int comparisons = 0;
         int swaps = 0;
@@ -33,15 +27,5 @@ public class Client {
         }
         System.out.println("Comparisons: " + comparisons);
         System.out.println("Swaps: " + swaps);
-    }
-
-    public static void main(String[] args) {
-        long startTime = System.currentTimeMillis();
-
-        int[] array = ArchiveOpener.openTenThousand();
-        sort(array);
-
-        long endTime = System.currentTimeMillis();
-        System.out.println("Time elapsed: " + (endTime - startTime) + "ms");
     }
 }
