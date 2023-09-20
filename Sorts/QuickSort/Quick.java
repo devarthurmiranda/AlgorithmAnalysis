@@ -6,10 +6,10 @@ public class Quick {
     }
 
     public static void sort(int[] array, int start, int end){
-        // It will stop the recursion when the array is divided into single elements
+        // Stop the recursion when the pointers cross
         if (start >= end) return;
 
-        // Divide the array in half
+        // Divide the array in two parts
         int pivot = partition(array, start, end);
 
         // Call the sort method recursively for each side
@@ -20,8 +20,8 @@ public class Quick {
     public static int partition(int[] array, int start, int end){
         // The pivot is the last element of the array
         int pivot = array[end];
-        // The index of the smaller element
-        int i = start - 1;
+        
+        int i = start - 1; // The index of the smaller element
         for(int j = start; j < end; j++){
             // If the current element is smaller than the pivot
             if(array[j] < pivot){
